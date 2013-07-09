@@ -13,6 +13,7 @@ group :test do
   gem 'rspec'
   gem 'capybara'
   gem 'shoulda-matchers'
+  gem 'rspec'
   gem 'factory_girl'
   gem 'ffaker'
   gem 'sqlite3'
