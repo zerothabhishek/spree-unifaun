@@ -11,6 +11,7 @@ group :test do
   gem 'vcr'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'rspec'
   gem 'factory_girl'
   gem 'ffaker'
   gem 'sqlite3'
