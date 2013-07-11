@@ -10,4 +10,4 @@
 <% end %>
 
 <%= link_to Spree.t(:post_to_unifaun, scope: :unifaun), '', class: 'button' %>
-<%= link_to Spree.t(:get_unifaun_status, scope: :unifaun), '', class: 'button' %>
+<%= link_to Spree.t(:get_unifaun_status, scope: :unifaun), track_shipment_path(@shipment), class: 'button' %>

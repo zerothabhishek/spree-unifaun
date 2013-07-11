@@ -1,5 +1,21 @@
 ![Unifaun Logo](https://raw.github.com/futhr/spree-unifaun/master/unifaun.png)
 
+# Shipment Tracking branch:
+
+__Client side__:
+
+The tracking feature appears on the order page. Looks like this:
+
+<img src="http://i.imgur.com/gQ8gS2jl.png" alt="order-page" width="600" />
+
+
+__Admin side__:
+
+The "Get Unifaun Status" button acts as the tracking link
+<img src="http://i.imgur.com/TjyoW50.png" alt-"admin-shipment-page" width="600" />
+
+
+
 # Spree Unifaun Packsoft ERPConnect
 
 [![Build Status](https://secure.travis-ci.org/futhr/spree-unifaun.png?branch=master)](http://travis-ci.org/futhr/spree-unifaun)

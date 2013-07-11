@@ -1,0 +1,7 @@
+<% if @order.shipped?  %>
+  <div class="tracking">
+    <% @order.shipments.each do |shipment| %>
+      <%= link_to "Track Unifaun Shipment", track_shipment_path(shipment) %>
+    <% end %>
+  </div>
+<% end %>
