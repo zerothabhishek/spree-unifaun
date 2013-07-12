@@ -2,7 +2,7 @@ class Spree::Unifaun::Carrier < ActiveRecord::Base
   self.table_name = :spree_unifaun_carriers
 
   #belongs_to :carrier_service, class_name: 'Spree::Unifaun::CarrierService'
-  has_many :carrier_services, class_name: 'Spree::Unifaun::CarrierService'
+  has_many :carrier_services, class_name: 'Spree::Unifaun::CarrierService', dependent: :destroy
 
   attr_accessible :code, :name
   validates :code, :name, presence: true
@@ -20,11 +20,10 @@ class Spree::Unifaun::Carrier < ActiveRecord::Base
   ## Imports carrier-services data from the given file
   def import_carrier_services(csv_file_path)
     require 'csv'
-    new_services = []
+    self.carrier_services.clear
     CSV.foreach(csv_file_path, col_sep:';', headers: true) do |row|
-      new_services << self.carrier_services.create(code: row[0], service: row[1])
+      self.carrier_services.create(code: row[0], service: row[1])
     end
-    self.carrier_services = new_services
   end
 
   ## Gives the file path for the carrier-services file: db/data/#{code}.csv
